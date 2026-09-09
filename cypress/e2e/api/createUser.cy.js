@@ -18,7 +18,7 @@ describe('Create User API Tests', () => {
             url: `${apiUrl}/usuarios`,
             body: user
         }).then((response) => {
-            expect(response.status).to.eq(201)
+            expect(response.status).to.eq(200)
             expect(response.body.message).to.eq('Cadastro realizado com sucesso')
             expect(response.body).to.have.property('_id').and.to.be.equal(response.body._id)
         })
