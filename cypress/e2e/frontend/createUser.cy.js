@@ -26,7 +26,7 @@ describe('Create User UI Tests', () => {
         cy.get('.alert').should('contain', 'Cadastro realizado com sucesso')
     })
 
-    it.only('Check return message when trying to create a user with an existing email', () => {
+    it('Check return message when trying to create a user with an existing email', () => {
         const email = `mikael.${Date.now()}@qa.com.br`
         const user = createNonAdminUserBodyRequest()
         cy.request({
